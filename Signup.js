@@ -7,6 +7,7 @@ const saisirmdp = document.querySelector(".saisirmdp");
 const saisirmdp2 = document.querySelector(".saisirmdp2")
 const testbutton = document.querySelector(".test")
 const form = document.querySelector("form")
+const sucess = document.querySelector(".messError2");
 const data = new FormData(form)
 
 
@@ -80,8 +81,11 @@ testbutton.addEventListener('click' , event =>{
     if(mail.value == ""){
         saisirmdp.style.display = "block";
     }
+    else if (mail.value !==""){
+        sucess.style.display = "block"
+    }
     else{
-        saisirmdp.style.display = "none"
+        saisirmdp.style.display="none"
     }
     })
     
@@ -89,9 +93,13 @@ testbutton.addEventListener('click' , event =>{
         if(password.value == ""){
             saisirmdp2.style.display = "block";
         }
+        else if (mail.value !==""){
+            sucess.style.display = "block"
+        }
         else{
-            saisirmdp2.style.display = "none"
+            saisirmdp2.style.display="none"
         }
         })
 
-        
+
+   

@@ -4,10 +4,10 @@ const testbutton = document.querySelector(".test");
 const sucess = document.querySelector(".messError2");
 
 testbutton.addEventListener('click' , event =>{
-    if(mail.value !== ""){
+    if(mail.value == ""){
         saisirmdp.style.display = "none";
     }
-    else if(mail.value == ""){
+    else if(mail.value !== ""){
         sucess.style.display = "block"
     }
     })
