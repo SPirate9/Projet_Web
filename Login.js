@@ -8,10 +8,9 @@ const data = new FormData(form)
 
 form.onsubmit = async (e) => {
     e.preventDefault();
-
     const response = await fetch('http://localhost:3000/login', {
       method: 'POST',
-      body: JSON.stringify({email : toString(data), password: toString(data)}),
+      body: JSON.stringify({email : toString(mail.value), password: toString(password.value)}),
         headers: { "Content-Type" : "application/json"},
     });
 
