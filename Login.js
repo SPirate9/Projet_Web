@@ -20,7 +20,6 @@ form.onsubmit = async (e) => {
     
 }
 
-
 testbutton.addEventListener('click' , event =>{
 if(mail.value == ""){
     saisirmdp.style.display = "block";
