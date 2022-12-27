@@ -4,13 +4,12 @@ const saisirmdp = document.querySelector(".saisirmdp");
 const saisirmdp2 = document.querySelector(".saisirmdp2")
 const testbutton = document.querySelector(".test")
 const form = document.querySelector("form")
-const data = new FormData(form)
 
 form.onsubmit = async (e) => {
     e.preventDefault();
     const response = await fetch('http://localhost:3000/login', {
       method: 'POST',
-      body: JSON.stringify({email : toString(mail.value), password: toString(password.value)}),
+      body: JSON.stringify({email : (mail.value), password: (password.value)}),
         headers: { "Content-Type" : "application/json"},
     });
 

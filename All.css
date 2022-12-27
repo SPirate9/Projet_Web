@@ -72,13 +72,13 @@ form{
  .messError2{
   font-family: 'Roboto';
   display: none;
-  color: green;
+  color: #27AE60;
   text-align: center;
   margin: auto;
  }
 
  .b{
-  color: green;
+  color:#27AE60;
   font: 400 16px 'Roboto';
   text-decoration: none;
 }

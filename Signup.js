@@ -8,56 +8,20 @@ const saisirmdp2 = document.querySelector(".saisirmdp2")
 const testbutton = document.querySelector(".test")
 const form = document.querySelector("form")
 const sucess = document.querySelector(".messError2");
-const data = new FormData(form)
 
 
 form.onsubmit = async (e) => {
     e.preventDefault();
-
     const response = await fetch('http://localhost:3000/user', {
       method: 'POST',
-      body: JSON.stringify({email : toString(mail.value), password: toString(password.value)}),
-      headers: { "Content-Type" : "application/json" },
+      body: JSON.stringify({email : (mail.value), password: (password.value)}),
+        headers: { "Content-Type" : "application/json"},
     });
 
     const result = await response.json();
     console.log(result)
+    
 }
-
-// TEST
-
-// const handleSubmit = async (event) => {
-//     event.preventDefault();
-
-//     const data = new FormData(form);
-
-//     try {
-//       const response = await fetch(form.action, {
-//         method: form.method,
-//         body: JSON.stringify({
-        
-//             body:new FormData(form) 
-//         }),
-//         headers: {
-//             "Content-Type" : "application/json"
-//           },
-//       });
-//       if (!response.ok) {
-//         throw new Error(`Error! status: ${response.status}`);
-//       }
-
-//       const responseData = await response.json();
-//       console.log(responseData);
-//       return responseData;
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-  
-//   form.addEventListener("submit", handleSubmit);
-
-
-// TEST
 
 function verif (param1,param2){
     if(param1 == param2){
