@@ -13,8 +13,12 @@ form.onsubmit = async (e) => {
         headers: { "Content-Type" : "application/json"},
     });
 
-    const result = await response.json();
-    console.log(result)
+    const result = await response;
+    console.log(result.status)
+    if (result.status == 200) {
+        document.location.href="/";
+    }
+    
     
 }
 
